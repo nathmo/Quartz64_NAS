@@ -1,5 +1,5 @@
 # Quartz64_NAS
-repo to repurpose a Quartz64 SBC as a home server / NAS using docker and zfs
+repo to repurpose a Quartz64 SBC as a home server / NAS using docker and zfs on plebian OS
 
 # What you get
 this document will walk you trough the setup of a NAS using the quartz64. it will allow you to self host
