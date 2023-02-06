@@ -38,7 +38,9 @@ and the following service that are not installed using docker compose and are re
 the total for the hardware is in the 200-1000 $ range ( the drive are expensive. if you have them aldready you can stay bellow the 250 $)
 
 cut one of the molex stub yellow and black cable ( 12V = yellow, 0V = black)
-and stip the insulation then screw inside the terminal.(double check the polarity if you dont want to destroy your board)
+and strip the insulation then screw inside the terminal.(double check the polarity if you dont want to destroy your board)
+
+
 ![image](https://user-images.githubusercontent.com/15912256/217092063-86f65d51-33b1-45c6-a2d3-39b7dbd8e005.png)
 
 # Setup
