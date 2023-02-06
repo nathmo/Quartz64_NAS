@@ -50,7 +50,7 @@ not much to say. wire the things thogeter in a nice enclosure
 ### Installing the OS
 you need an SD card and to download the following image from plebian : https://github.com/Plebian-Linux/quartz64-images/releases
 (download the one ending with -quartz64a.img.xz)
-
+armbian is not mature enough for this board and the peoples at plebian did an amazing job with thoeses images so i recommend using them instead of armbain 
 on linux you can run this from the folder where you downloaded the image (change sdX by the drive shown with lsblk)
 ```
 sudo apt install gunzip
