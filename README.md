@@ -11,7 +11,7 @@ I'm currently hosting on mine :
 - piwigo (photo gallerie for family)
 - radicale ( calendar server, allow me to sync my event betweens my phone and computers)
 
-and the following service that are not installed using docker compose and are really hand to make your server more user friendly
+and the following service that are not installed using docker compose and are really handy to make your server more user friendly
 - cockpit (a web interface to monitor the status of your server)
 - portainer ( web interface for deploying docker compose file)
 - ddclient (script that tell your domaine name registrar your public ip when it change if you dont have a static public IP) (useful if you want to access your network from outside using a VPN)
