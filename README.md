@@ -105,15 +105,37 @@ change the image filelane as you want to use the lasted from the link (https://g
 once its done. copying you can remove the SD card and reboot the board. its now booting from the emmc.
 
 ### set a static IP
+if your router accept to use a local domain name to open a port and you can use mDNS then you can skip this step and use "plebian-quartz64a.local" in place of the IP adress.
+
+if not, you can follow thoses step to setup it up ( plebian use network manager natively) 
 but first : update
 ```
 sudo  apt install nano htop tmux wget curl
 sudo apt update
 sudo apt upgrade
 ```
-then edit this file : 
+then : 
+```ip addr```
+find the interface your board is using (end0 in my case)
+```
+sudo nmcli con mod end0 ipv4.addresses 192.168.1.10/24
+```
+```
+sudo nmcli con mod end0 ipv4.gateway 192.168.1.1
+```
+```
+nmcli con mod end0 ipv4.dns “1.1.1.1”
+```
+```
+nmcli con mod end0 ipv4.method manual
+```
+```
+nmcli con up end0
+```
+
+if you have trouble with nmcli you can use the next method as a fallback. but it's deprecated and might cause problem later on : 
 ```sudo nano /etc/network/interfaces```
-like that
+
 ```
 auto end0
 iface end0 inet static
@@ -131,6 +153,9 @@ and add that in the file : (it's google and cloudflare DNS server)
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 ```
+this is the end of the deprecated instruction.
+
+
 now restart the board. you will be able to reconnect via SSH on the choosen IP address (wait 1-2 min for the board to reboot)
 
 ```
@@ -223,7 +248,7 @@ to get a QR code that you can scan or you can
 cat /home/ubuntu/configs/*.conf
 ```
 and you can import that in a text file on your phone or computer and import it into wireguard vpn client.
-
+(you need to open the port xou choose in your router and redirect it to your NAS server)
 ### install ZFS
 
 ```
@@ -340,3 +365,4 @@ you have now a solid NAS setup where you can add more service using a simple dok
 - cockpit : http://192.168.1.10:9090/#
 - portainer : http://192.168.1.10:9000/#
 - syncthing : http://192.168.1.10:8384/#
+- VPN server : pivpn -a to add more config (from the shell)
