@@ -5,7 +5,6 @@ repo to repurpose a Quartz64 SBC as a home server / NAS using docker and zfs on 
 this document will walk you trough the setup of a NAS using the quartz64. it will allow you to self host
 a lot of service using docker compose file.
 I'm currently hosting on mine : 
-- zoneminder (surveillance camera recordind system)
 - paperless-ngx (managed all your digital document like bill, official stuff, certificate and more)
 - jellyfin (netflix like interface for your video)
 - synchting ( onedrive like system that allow you to sync your file between your computers. its free and you keep your data on your device)
