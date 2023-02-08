@@ -89,16 +89,28 @@ sudo apt-get install memtester
 sudo memtester 7500 2
 ```
 it's going to take a few minutes.
+
 ![image](https://user-images.githubusercontent.com/15912256/217096238-9a62be53-abc2-4923-bada-79fb4fce838e.png)
 
 ### copying to the emmc
 if you dont have an emmc you can skip this step.
-
-```wget https://github.com/Plebian-Linux/quartz64-images/releases/download/v2023-01-21-1/plebian-debian-bookworm-quartz64a.img.xz```
-```sudo apt-get install xz-utils```
-```unxz plebian-debian-bookworm-quartz64a.img.xz```
-```lsblk```
-```sudo dd of=/dev/mmcblk1 if=plebian-debian-bookworm-quartz64a.img  bs=1M status=progress```
+(basically redo what you did on your computer but from the running system on the SD card this time.
+so run thoses command on the quartz board 
+```
+wget https://github.com/Plebian-Linux/quartz64-images/releases/download/v2023-01-21-1/plebian-debian-bookworm-quartz64a.img.xz
+```
+```
+sudo apt-get install xz-utils
+```
+```
+unxz plebian-debian-bookworm-quartz64a.img.xz
+```
+```
+lsblk
+```
+```
+sudo dd of=/dev/mmcblk1 if=plebian-debian-bookworm-quartz64a.img  bs=1M status=progress
+```
 ensure mmcblk1 is your EMMC ! 
 change the image filelane as you want to use the lasted from the link (https://github.com/Plebian-Linux/quartz64-images/releases)(right click on the quartz64a version -> copy the link)
 once its done. copying you can remove the SD card and reboot the board. its now booting from the emmc.
