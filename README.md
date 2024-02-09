@@ -286,7 +286,10 @@ if you aldready have a ZFS pool from a previous install you can import it with
 ```
 sudo zpool import storagearray -f
 ```
-
+and you can expand it by adding vdev
+```
+zpool add storagearray raidz2 /dev/sdu /dev/sdv /dev/sdw /dev/sdx /dev/sdy /dev/sdz
+```
 ### Install docker
 docker allow you to run container, portainer is a nice web page to manage your portainer. its more user friendly than the shell at first
 here we create a volume on the ZFS array for portainer and then launche the portainer container
